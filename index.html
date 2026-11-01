@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>Under Maintenance | DocuMind</title>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap" rel="stylesheet" />
+
+		<style>
+			:root {
+				/* Blue theme */
+				--primary: #2563eb;
+				--primary-hover: #1d4ed8;
+				--primary-soft: #dbeafe;
+				--primary-ring: rgba(37, 99, 235, 0.25);
+				--primary-glow-a: rgba(37, 99, 235, 0.1);
+				--primary-glow-b: rgba(59, 130, 246, 0.07);
+
+				--text-main: #0f172a;
+				--text-sub: #475569;
+				--text-light: #94a3b8;
+
+				--border: #e2e8f0;
+				--bg: #f0f6ff;
+				--bg-card: #ffffff;
+				--shadow-lg: 0 10px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.05);
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				height: 100%;
+			}
+
+			body {
+				font-family:
+					"Poppins",
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					sans-serif;
+				background:
+					radial-gradient(circle at 18% 18%, var(--primary-glow-a), transparent 45%), radial-gradient(circle at 82% 82%, var(--primary-glow-b), transparent 45%), var(--bg);
+				color: var(--text-main);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 100vh;
+				padding: 24px;
+			}
+
+			.maintenance-card {
+				background: var(--bg-card);
+				border-radius: 24px;
+				box-shadow: var(--shadow-lg);
+				border: 1px solid rgba(37, 99, 235, 0.08);
+				max-width: 560px;
+				width: 100%;
+				padding: 48px 40px;
+				text-align: center;
+				animation: fadeUp 0.5s ease-out;
+			}
+
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(16px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			/* Brand — Righteous, all caps */
+			.brand {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				margin-bottom: 28px;
+			}
+
+			.brand i {
+				font-size: 22px;
+				color: var(--primary);
+			}
+
+			.brand-name {
+				font-family: "Righteous", sans-serif;
+				font-size: 24px;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				color: var(--primary);
+				line-height: 1;
+			}
+
+			.icon-wrap {
+				width: 92px;
+				height: 92px;
+				margin: 0 auto 24px;
+				border-radius: 50%;
+				background: var(--primary-soft);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+
+			.icon-wrap i {
+				font-size: 44px;
+				color: var(--primary);
+				animation: spin 4s linear infinite;
+			}
+
+			@keyframes spin {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			.icon-wrap::after {
+				content: "";
+				position: absolute;
+				inset: -6px;
+				border-radius: 50%;
+				border: 2px dashed var(--primary-ring);
+				animation: spin 12s linear infinite reverse;
+			}
+
+			/* Heading — Poppins */
+			h1 {
+				font-family: "Poppins", sans-serif;
+				font-weight: 600;
+				font-size: 26px;
+				line-height: 1.3;
+				margin-bottom: 14px;
+				color: var(--text-main);
+			}
+
+			h1 .accent {
+				color: var(--primary);
+			}
+
+			/* Body — Poppins */
+			p {
+				font-family: "Poppins", sans-serif;
+				font-size: 15px;
+				line-height: 1.6;
+				color: var(--text-sub);
+				margin-bottom: 8px;
+			}
+
+			p.eta {
+				font-size: 13px;
+				color: var(--text-light);
+				margin-bottom: 32px;
+			}
+
+			.actions {
+				display: flex;
+				gap: 12px;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 28px;
+			}
+
+			.btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 11px 22px;
+				border-radius: 12px;
+				font-family: "Poppins", sans-serif;
+				font-weight: 500;
+				font-size: 14px;
+				cursor: pointer;
+				border: none;
+				text-decoration: none;
+				transition: all 0.2s ease;
+			}
+
+			.btn-primary {
+				background: var(--primary);
+				color: #fff;
+				box-shadow: 0 4px 12px -2px rgba(37, 99, 235, 0.35);
+			}
+
+			.btn-primary:hover {
+				background: var(--primary-hover);
+				transform: translateY(-1px);
+				box-shadow: 0 6px 16px -2px rgba(37, 99, 235, 0.45);
+			}
+
+			.btn-secondary {
+				background: #eff6ff;
+				color: var(--primary-hover);
+				border: 1px solid rgba(37, 99, 235, 0.15);
+			}
+
+			.btn-secondary:hover {
+				background: #dbeafe;
+				transform: translateY(-1px);
+			}
+
+			.btn i {
+				font-size: 14px;
+			}
+
+			.status-note {
+				font-family: "Poppins", sans-serif;
+				font-size: 12px;
+				color: var(--text-light);
+				padding-top: 20px;
+				border-top: 1px solid var(--border);
+			}
+
+			.status-note strong {
+				color: var(--text-sub);
+				font-weight: 500;
+			}
+
+			@media (max-width: 480px) {
+				.maintenance-card {
+					padding: 36px 24px;
+				}
+				.brand-name {
+					font-size: 20px;
+				}
+				h1 {
+					font-size: 22px;
+				}
+				.icon-wrap {
+					width: 76px;
+					height: 76px;
+				}
+				.icon-wrap i {
+					font-size: 36px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<main class="maintenance-card" role="main">
+			<div class="brand">
+				<span class="brand-name">DOCUMIND</span>
+			</div>
+
+			<div class="icon-wrap" aria-hidden="true">
+				<i class="bi bi-gear-wide-connected"></i>
+			</div>
+
+			<h1>We'll be <span class="accent">right back</span></h1>
+			<p>DocuMind is undergoing scheduled maintenance.</p>
+			<p class="eta">We're improving things under the hood — this usually takes a few minutes.</p>
+
+			<div class="actions">
+				<button type="button" class="btn btn-primary" onclick="location.reload()">
+					<i class="bi bi-arrow-clockwise"></i>
+					Refresh
+				</button>
+				<a href="mailto:support@documind.example" class="btn btn-secondary">
+					<i class="bi bi-envelope"></i>
+					Contact support
+				</a>
+			</div>
+
+			<div class="status-note">
+				<strong>Reference:</strong>
+				<span id="refTime"></span>
+			</div>
+		</main>
+
+		<script>
+			const el = document.getElementById("refTime");
+			if (el) {
+				el.textContent = new Date().toLocaleString(undefined, {
+					year: "numeric",
+					month: "short",
+					day: "numeric",
+					hour: "2-digit",
+					minute: "2-digit",
+				});
+			}
+		</script>
+	</body>
+</html>
